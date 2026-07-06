@@ -1,16 +1,10 @@
 package com.example.demo.Posts;
 
-import java.time.LocalDateTime;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,30 +19,24 @@ public class Post {
     
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private long characterId;
 
   @Column(nullable = false)
-  private String title;
+  private String name;
 
   @Column(nullable = false, columnDefinition = "TEXT")
-  private String content;
+  private String description;
 
   @Column(nullable = false)
-  private String author;
+  private String role;
 
-  @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
-  private LocalDateTime createdAt;
+  @Column(nullable = false)
+  private Double age;
 
-  public Post(String title, String content, String author) {
-    this.title = title;
-    this.content = content;
-    this.author = author;
+  public Post(String name, String description, String role, Double age) {
+    this.name = name;
+    this.description = description;
+    this.role = role;
+    this.age = age;
   }
-
-  @PrePersist
-  @PreUpdate
-  protected void onUpdate() {
-    this.createdAt = LocalDateTime.now();
-  }
-
 }

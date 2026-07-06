@@ -27,9 +27,8 @@ public class PostService {
     public Post updatePost(long id, Post updatedPost) {
         Post existingPost = postRepository.findById(id).orElse(null);
         if (existingPost != null) {
-            existingPost.setTitle(updatedPost.getTitle());
-            existingPost.setContent(updatedPost.getContent());
-            existingPost.setAuthor(updatedPost.getAuthor());
+            existingPost.setName(updatedPost.getName());
+            existingPost.setDescription(updatedPost.getDescription());
             return postRepository.save(existingPost);
         }
         return null;

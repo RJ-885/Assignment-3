@@ -45,9 +45,9 @@ public class AppController {
         return ResponseEntity.ok(createdPost);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Post> updatePost(@PathVariable long id, @RequestBody Post updatedPost) {
-        Post post = postService.updatePost(id, updatedPost);
+    @PutMapping("/{characterId}")
+    public ResponseEntity<Post> updatePost(@PathVariable long characterId, @RequestBody Post updatedPost) {
+        Post post = postService.updatePost(characterId, updatedPost);
         if (post != null) {
             return ResponseEntity.ok(post);
         } else {
@@ -55,9 +55,9 @@ public class AppController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletePost(@PathVariable long id) {
-        boolean deleted = postService.deletePost(id);
+    @DeleteMapping("/{characterId}")
+    public ResponseEntity<Void> deletePost(@PathVariable long characterId) {
+        boolean deleted = postService.deletePost(characterId);
         if (deleted) {
             return ResponseEntity.noContent().build();
         } else {
@@ -71,9 +71,9 @@ public class AppController {
         return ResponseEntity.ok(posts);
     }
 
-    @GetMapping("/author")
-    public ResponseEntity<List<Post>> getPostsByAuthor(@RequestParam String name) {
-        List<Post> posts = postService.getPostsByCharacter(name);
+    @GetMapping("/role")
+    public ResponseEntity<List<Post>> getPostsByRole(@RequestParam String role) {
+        List<Post> posts = postService.getPostsByRole(role);
         return ResponseEntity.ok(posts);
     }
 }

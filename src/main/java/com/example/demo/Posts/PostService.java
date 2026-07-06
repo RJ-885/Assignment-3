@@ -43,10 +43,10 @@ public class PostService {
     }
 
     public List<Post> searchPosts(String keyword) {
-        return postRepository.findByTitleContainingIgnoreCaseOrContentContainingIgnoreCase(keyword, keyword);
+        return postRepository.findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(keyword, keyword);
     }
 
-    public List<Post> getPostsByCharacter(String name) {
-        return postRepository.findByNameIgnoreCase(name);
+    public List<Post> getPostsByRole(String role) {
+        return postRepository.findByRoleIgnoreCase(role);
     }
 }

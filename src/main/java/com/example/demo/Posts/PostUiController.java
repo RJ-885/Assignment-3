@@ -26,4 +26,12 @@ public class PostUiController {
 
         return "details";
     }
+
+    @GetMapping("/characters")
+    public String getAllPosts(Model model) {
+        model.addAttribute("postsList", postService.getAllPosts());
+        model.addAttribute("pageTitle", "All Posts");
+
+        return "index";
+    }
 }

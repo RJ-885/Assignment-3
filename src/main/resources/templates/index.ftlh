@@ -41,103 +41,27 @@
     <h3>Character Gallery</h3>
 
     <div class="cards">
-        <article class="card">
-            <header>
-                <a href="details.html">
-                    <h2>Black Panther</h2>
-                </a>
-            </header>
+        <#list characterList as character>
+            <article class="card">
+                <header>
+                    <a href="/characters/${character.characterId?c}">
+                        <h2>${post.name}</h2>
+                    </a>
+                </header>
 
-            <img src="black-panther.jpg" alt="Black Panther" />
+                <img src="black-panther.jpg" alt="Black Panther" />
 
-            <div class="content">
-                <p>
-                    Also known as T’Challa, he is the king of Wakanda, known for his superhuman abilities, intelligence,
-                    and leadership.
-                </p>
-            </div>
+                <div class="content">
+                    <p>
+                        ${post.description}
+                    </p>
+                </div>
 
-            <footer>
-                <span class="badge-hero">Hero</span>
-                <span class="badge-ruler">Ruler</span>
-            </footer>
-        </article>
-
-        <article class="card">
-            <header>
-                <a href="details.html">
-                    <h2>Doctor Doom</h2>
-                </a>
-            </header>
-
-            <img src="doctor-doom.jpg" alt="Doctor Doom" />
-
-            <div class="content">
-                <p>
-                    Doctor Doom, born Victor von Doom, is the ruler of Latveria, and archenemy
-                    of the Fantastic Four.
-                </p>
-            </div>
-            <footer>
-                <span class="badge-villain">Villain</span>
-                <span class="badge-ruler">Ruler</span>
-            </footer>
-        </article>
-
-        <article class="card">
-            <header>
-                <a href="details.html">
-                    <h2>Iron Man</h2>
-                </a>
-            </header>
-
-            <img src="iron-man.jpg" alt="Iron Man" />
-
-            <div class="content">
-                <p>
-                    Iron Man is the superhero alter ego of Tony Stark, a genius billionaire inventor who uses a powered suit of armor to fight evil and protect the world.
-                </p>
-            </div>
-            <footer>
-                <span class="badge-civilian">Civilian</span>
-            </footer>
-        </article>
-        
-        <article class="card">
-            <header>
-                <a href="details.html">
-                    <h2>Thanos</h2>
-                </a>
-            </header>
-
-            <img src="thanos.jpg" alt="Thanos" />
-            <div class="content">
-                <p>
-                    Thanos is a powerful supervillain, known as the Mad Titan, who seeks to balance the universe by eliminating half of all life.
-                </p>
-            </div>
-            <footer>
-                <span class="badge-villain">Villain</span>
-            </footer>
-        </article>
-
-        <article class="card">
-            <header>
-                <a href="details.html">
-                    <h2>Spider Man</h2>
-                </a>
-            </header>
-
-            <img src="spider-man.jpg" alt="Spider-Man" />
-            <div class="content">
-                <p>
-                    Spider-Man is the superhero alter ego of Peter Parker, a teenager from Queens, New York, who gains superhuman abilities after being bitten by a radioactive spider.
-                </p>
-            </div>
-            <footer>
-                <span class="badge-hero">Hero</span>
-            </footer>
-        </article>
+                <footer>
+                    <h3>${post.role}</h3>
+                </footer>
+            </article>
+        </#list>
     </div>
 </body>
 

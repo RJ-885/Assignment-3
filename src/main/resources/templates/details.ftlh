@@ -28,21 +28,10 @@
         <div class="character-details">
             <div class="row">
                 <div class="description-header">
-                    <h3>Black Panther</h3>
-                </div>
-                
-                <div class="column-image">
-                    <img src="black-panther.jpg" alt="Black Panther">
+                    <h3>${post.name}</h3>
                 </div>
                 <div class="column-description">
-                    <p>
-                         Also known as T’Challa, he is the king of Wakanda, known for his superhuman abilities, intelligence,
-                        and leadership.
-                    
-                        Black Panther has acute senses as well as extraordinary "speed, strength, reflexes, durability, healing, and stamina." 
-                        These capacities partly come from his own training and partly from the properties of a Wakandan heart-shaped herb. 
-                        The relationship between the heart-shaped herb and Wakanda's vibranium resources is unclear.
-                    </p>
+                    <p>${post.description}</p>
                 </div>
             </div>
         </div>

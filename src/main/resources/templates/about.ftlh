@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
     <nav>
         <ul class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="details.html">Details</a>
-            <a href="about.html">About</a>
-            <a href="new-character-form.html">Add New Character</a>
+            <a href="/index">Home</a>
+            <a href="/details">Details</a>
+            <a href="/about">About</a>
+            <a href="/new-character-form">Add New Character</a>
         </ul>
 
         <header>

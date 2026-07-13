@@ -41,7 +41,7 @@
     <h3>Character Gallery</h3>
 
     <div class="cards">
-        <#list characterList as character>
+        <#list characterList as post>
             <article class="card">
                 <header>
                     <a href="/characters/${character.characterId?c}">

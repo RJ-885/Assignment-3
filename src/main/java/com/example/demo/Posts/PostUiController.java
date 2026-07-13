@@ -19,10 +19,10 @@ public class PostUiController {
         return "about";
     }
 
-    @GetMapping("/details/{characterId}")
+    @GetMapping("/characters/{characterId}")
     public String getPostById(@PathVariable long characterId, Model model) {
         Post character = postService.getPostById(characterId);
-        model.addAttribute("character", character);
+        model.addAttribute("post", character);
 
         return "details";
     }

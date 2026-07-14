@@ -33,6 +33,8 @@ public class Post {
   @Column(nullable = false)
   private Double age;
 
+  private String thumbnailUrl;
+
   public Post(String name, String description, String role, Double age) {
     this.name = name;
     this.description = description;

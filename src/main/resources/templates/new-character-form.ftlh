@@ -11,10 +11,9 @@
 <body>
     <nav>
         <ul class="main-nav">
-            <a href="/index">Home</a>
-            <a href="/details">Details</a>
+            <a href="/characters">Home</a>
             <a href="/about">About</a>
-            <a href="/new-character-form">Add New Character</a>
+            <a href="/characters/new">Add New Character</a>
         </ul>
 
         <header>
@@ -25,15 +24,12 @@
     <div class="container">
         <div class="new-character-form">
             <h3>Add a New Character</h3>
-            <form action="submit-character.php" method="POST">
+            <form action="/characters/save" method="post" enctype="multipart/form-data">
                 <label for="name">Character Name:</label>
                 <input type="text" id="name" name="name" required>
 
                 <label for="description">Character Description:</label>
                 <textarea id="description" name="description" required></textarea>
-
-                <label for="image">Character Image URL:</label>
-                <input type="url" id="image" name="image" required>
 
                 <label for="role">Character Role:</label>
                 <select id="role" name="role" required>
@@ -43,6 +39,12 @@
                     <option value="civilian">Civilian</option>
                     <option value="ruler">Ruler</option>
                 </select>
+
+                <label for="age">Character Age</label>
+                <textarea id="age" name="age"></textarea>
+
+                <label for="thumbnailFile">Thumbnail Image</label>
+                <input type="file" id="thumbnailFile" name="thumbnailFile" required>
 
                 <button type="submit">Add Character</button>
             </form>

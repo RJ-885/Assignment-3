@@ -11,10 +11,9 @@
 <body>
     <nav>
         <ul class="main-nav">
-            <a href="/index">Home</a>
-            <a href="/details">Details</a>
+            <a href="/characters">Home</a>
             <a href="/about">About</a>
-            <a href="/new-character-form">Add New Character</a>
+            <a href="/characters/new">Add New Character</a>
         </ul>
 
         <header>

@@ -11,10 +11,9 @@
 <body>
     <nav>
         <ul class="main-nav">
-            <a href="/index">Home</a>
-            <a href="/details">Details</a>
+            <a href="/characters">Home</a>
             <a href="/about">About</a>
-            <a href="/new-character-form">Add New Character</a>
+            <a href="/characters/new">Add New Character</a>
         </ul>
 
         <header>
@@ -41,15 +40,15 @@
     <h3>Character Gallery</h3>
 
     <div class="cards">
-        <#list characterList as post>
+        <#list postsList as post>
             <article class="card">
                 <header>
-                    <a href="/characters/${character.characterId?c}">
+                    <a href="/characters/${post.characterId?c}">
                         <h2>${post.name}</h2>
                     </a>
                 </header>
 
-                <img src="black-panther.jpg" alt="Black Panther" />
+                <img src="post_4.png" />
 
                 <div class="content">
                     <p>
@@ -58,7 +57,7 @@
                 </div>
 
                 <footer>
-                    <h3>${post.role}</h3>
+                    <h4>${post.role}</h4>
                 </footer>
             </article>
         </#list>
